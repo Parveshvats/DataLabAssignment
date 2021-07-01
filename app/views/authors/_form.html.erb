@@ -1,0 +1,6 @@
+<%= form_for @author, meyhod: :post do |f| %>
+  First Name<%= f.text_field :first_name %></br>
+  Last Name<%= f.text_field :last_name %></br>
+  Date Of Birth<%= f.date_field :dob %></br>
+  <%= f.submit %>
+<% end %>

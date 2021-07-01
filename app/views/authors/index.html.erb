@@ -1,0 +1,7 @@
+<% @authors.each do |author| %></br>
+  First Name: <%= author.first_name %>
+  Last Name: <%= author.last_name %>
+  Date of Birth: <%= author.dob %></br>
+  <%= link_to 'Edit Author', edit_author_path(author.id) %>
+  <%= button_to 'Delete Author', author_path(author), method: :delete, data: {confirm: "Are you sure?"} %>
+<% end %>

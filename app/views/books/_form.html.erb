@@ -1,0 +1,5 @@
+<%= form_for @book, meyhod: :post do |f| %>
+  Book Title: <%= f.text_field :title %></br>
+  Author: <%= f.select(:author_ids, Author.all.collect {|p| [ p.first_name, p.id ] }, { :prompt => "Please select"}, { :multiple => true, :size => 5 }) %>
+  <%= f.submit %>
+<% end %>
